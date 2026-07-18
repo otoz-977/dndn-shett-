@@ -1,0 +1,194 @@
+body {
+    /* A subtle parchment-like background color */
+    background-color: #fdfaf6; 
+    font-family: 'Open Sans', sans-serif;
+    color: #222;
+}
+
+.dnd-font {
+    font-family: 'Libre Baskerville', serif;
+}
+
+/* Styling to remove default input styles and make them blend into the sheet */
+input:focus {
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 4px;
+}
+
+/* The specific D&D header field look: light grey bg, text label at the bottom */
+.header-field {
+    position: relative;
+    background-color: #f0f0f0;
+    border: 1px solid #d4d4d4;
+    border-radius: 4px;
+    padding: 10px 10px 16px 10px; /* Extra padding at bottom for the label */
+    display: flex;
+    flex-direction: column;
+}
+
+.header-field input {
+    background: transparent;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 1.125rem; /* text-lg */
+    border-bottom: 1px solid #999;
+    width: 90%;
+}
+
+.header-field label {
+    position: absolute;
+    bottom: 2px;
+    left: 8px;
+    font-size: 0.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #555;
+}
+
+/* Stat block styling */
+.stat-box {
+    border: 3px solid #dcdcdc;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding-bottom: 12px;
+}
+
+.stat-label {
+    font-size: 0.6rem;
+    font-weight: 700;
+    margin-top: 4px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.stat-score {
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    font-family: 'Libre Baskerville', serif;
+}
+
+.stat-mod {
+    position: absolute;
+    bottom: -12px; /* Hangs off the bottom */
+    width: 40px;
+    height: 24px;
+    border: 2px solid #dcdcdc;
+    border-radius: 12px;
+    background-color: white;
+    text-align: center;
+    font-size: 0.875rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* --- NEW STYLES FOR TRAITS & SKILLS --- */
+.stat-box {
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.stat-box:hover {
+    border-color: #0b77e9;
+    box-shadow: 0 4px 12px rgba(109, 8, 8, 0.15);
+    transform: translateY(-2px);
+}
+
+.stat-box.active {
+    border-color: #b91c1c; /* D&D Red */
+    box-shadow: 0 4px 12px rgba(109, 8, 8, 0.15);
+    background-color: rgb(196, 133, 133);
+}
+
+.trait-box {
+    border: 2px solid #dcdcdc;
+    border-radius: 8px;
+    background-color: white;
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.02);
+    flex: 1;
+    min-width: 140px;
+}
+
+.trait-box input {
+    width: 45px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Libre Baskerville', serif;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #ddd;
+}
+
+.trait-label {
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: left;
+    line-height: 1.2;
+    color: #555;
+}
+
+.skill-row {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    border-bottom: 1px solid #f0f0f0;
+    transition: background-color 0.1s;
+}
+
+.skill-row:hover {
+    background-color: #f9f9f9;
+}
+
+.skill-checkbox-group {
+    display: flex;
+    gap: 6px;
+    margin-right: 16px;
+}
+
+.dnd-radio {
+    appearance: none;
+    width: 14px;
+    height: 14px;
+    border: 2px solid #999;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    outline: none;
+}
+
+.dnd-radio:checked {
+    background-color: #222;
+    border-color: #222;
+}
+
+.dnd-radio.exp {
+    border-radius: 3px; /* Slightly square for expertise to differentiate */
+}
+
+.dnd-radio.exp:checked {
+    background-color: #b91c1c;
+    border-color: #b91c1c;
+}
+
+/* Remove spin buttons from number inputs for a cleaner look */
+.header-field input[type="number"]::-webkit-inner-spin-button, 
+.header-field input[type="number"]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+}
+.header-field input[type="number"] {
+    -moz-appearance: textfield;
+}
