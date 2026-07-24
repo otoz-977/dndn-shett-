@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>D&D 5e Character Sheet</title>
+    <title>Hoja de Personaje de D&D 5e</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,32 +20,32 @@
             
             <!-- Character Name -->
             <div class="w-full md:w-1/3 pb-2 relative border-b-2 border-gray-400">
-                <input type="text" id="charName" class="w-full text-3xl dnd-font mb-3 bg-transparent" placeholder="Character Name">
-                <label for="charName" class="absolute -bottom-5 left-0 text-xs font-bold text-gray-500 uppercase">Character Name</label>
+                <input type="text" id="charName" class="w-full text-3xl dnd-font mb-3 bg-transparent" placeholder="Nombre del personaje">
+                <label for="charName" class="absolute -bottom-5 left-0 text-xs font-bold text-gray-500 uppercase">Nombre del personaje</label>
             </div>
 
             <!-- Header Info Grid -->
             <div class="w-full md:w-2/3 bg-[#f0f0f0] p-3 rounded-lg border border-gray-300 grid grid-cols-3 md:grid-cols-3 gap-3">
                 <div class="flex gap-1">
                     <div class="header-field flex-grow">
-                        <input type="text" id="charClass" placeholder="e.g. Fighter">
-                        <label for="charClass">Class</label>
+                        <input type="text" id="charClass" placeholder="Ej. Guerrero">
+                        <label for="charClass">Clase</label>
                     </div>
                     <div class="header-field w-20">
                         <input type="number" id="charLevel" value="1" min="1" max="20" class="text-center">
-                        <label for="charLevel" class="w-full text-center" style="left: 0;">Level</label>
+                        <label for="charLevel" class="w-full text-center" style="left: 0;">Nivel</label>
                     </div>
                     
                 </div>
                 
                 <div class="header-field ">
-                    <input type="text" id="charRace" placeholder="e.g. Human">
-                    <label for="charRace">Race</label>
+                    <input type="text" id="charRace" placeholder="Ej. Humano">
+                    <label for="charRace">Raza</label>
                 </div>
 
                 <div class="header-field">
-                    <input type="text" id="charSubclass" placeholder="e.g. Champion">
-                    <label for="charSubclass">Subclass</label>
+                    <input type="text" id="charSubclass" placeholder="Ej. Campeón">
+                    <label for="charSubclass">Subclase</label>
                 </div>
             </div>
         </header>
@@ -53,31 +53,31 @@
         <!--NAV BAR-->
         <nav class="flex border-b-2 border-gray-300 mb-16 gap-1 m overflow-x-auto whitespace-nowrap ">
             <button onclick="switchTab('stats-tab')" id="btn-stats-tab" class="tab-btn px-4 py-2 font-bold text-sm uppercase tracking-wider border-b-4 border-red-700 text-red-700 focus:outline-none">
-                Core Stats
+                Atributos Principales
             </button>
             <button onclick="switchTab('skills-tab')" id="btn-skills-tab" class="tab-btn px-4 py-2 font-bold text-sm uppercase tracking-wider border-b-4 border-transparent text-gray-300 hover:text-gray-700 focus:outline-none">
-                Traits & Actions
+                Rasgos y Acciones
             </button>
              <button onclick="switchTab('inventory-tab')" id="btn-inventory-tab" class="tab-btn px-4 py-2 font-bold text-sm uppercase tracking-wider border-b-4 border-transparent text-gray-300 hover:text-gray-700 focus:outline-none">
-                Inventory
+                Inventario
             </button>
              <button onclick="switchTab('spell-tab')" id="btn-spell-tab" class="tab-btn px-4 py-2 font-bold text-sm uppercase tracking-wider border-b-4 border-transparent text-gray-300 hover:text-gray-700 focus:outline-none">
-                Spells
+                Conjuros
             </button>
             <button onclick="switchTab('map-tab')" id="btn-map-tab" class="tab-btn px-4 py-2 font-bold text-sm uppercase tracking-wider border-b-4 border-transparent text-gray-300 hover:text-gray-700 focus:outline-none">
-                Maps
+                Mapas
             </button>
         </nav>
 
         <div id="stats-tab" class="tab-content block">
             <!--Main Stats-->
             <section class="mb-12">
-            <h2 class="sr-only">Main Attributes</h2>
+            <h2 class="sr-only">Atributos Principales</h2>
             <div class="flex flex-row flex-wrap justify-center gap-4 md:gap-8 w-full">
                 
                 <!-- Strength -->
                 <div class="stat-box w-20 md:w-24 h-28" data-stat="str">
-                    <label for="strScore" class="stat-label">Strength</label>
+                    <label for="strScore" class="stat-label">Fuerza</label>
                     <input type="text" id="strScore" class="stat-score mt-2" value="10">
                     <div class="stat-mod">
                         <input type="text" id="strMod" class="w-full text-center bg-transparent border-none outline-none font-bold text-sm pointer-events-none" value="+0" tabindex="-1">
@@ -86,7 +86,7 @@
 
                 <!-- Dexterity -->
                 <div class="stat-box w-20 md:w-24 h-28" data-stat="dex">
-                    <label for="dexScore" class="stat-label">Dexterity</label>
+                    <label for="dexScore" class="stat-label">Destreza</label>
                     <input type="text" id="dexScore" class="stat-score mt-2" value="10">
                     <div class="stat-mod">
                         <input type="text" id="dexMod" class="w-full text-center bg-transparent border-none outline-none font-bold text-sm pointer-events-none" value="+0" tabindex="-1">
@@ -95,7 +95,7 @@
 
                 <!-- Constitution -->
                 <div class="stat-box w-20 md:w-24 h-28" data-stat="con">
-                    <label for="conScore" class="stat-label">Constitution</label>
+                    <label for="conScore" class="stat-label">Constitución</label>
                     <input type="text" id="conScore" class="stat-score mt-2" value="10">
                     <div class="stat-mod">
                         <input type="text" id="conMod" class="w-full text-center bg-transparent border-none outline-none font-bold text-sm pointer-events-none" value="+0" tabindex="-1">
@@ -104,7 +104,7 @@
 
                 <!-- Intelligence -->
                 <div class="stat-box w-20 md:w-24 h-28" data-stat="int">
-                    <label for="intScore" class="stat-label">Intelligence</label>
+                    <label for="intScore" class="stat-label">Inteligencia</label>
                     <input type="text" id="intScore" class="stat-score mt-2" value="10">
                     <div class="stat-mod">
                         <input type="text" id="intMod" class="w-full text-center bg-transparent border-none outline-none font-bold text-sm pointer-events-none" value="+0" tabindex="-1">
@@ -113,7 +113,7 @@
 
                 <!-- Wisdom -->
                 <div class="stat-box w-20 md:w-24 h-28" data-stat="wis">
-                    <label for="wisScore" class="stat-label">Wisdom</label>
+                    <label for="wisScore" class="stat-label">Sabiduría</label>
                     <input type="text" id="wisScore" class="stat-score mt-2" value="10">
                     <div class="stat-mod">
                         <input type="text" id="wisMod" class="w-full text-center bg-transparent border-none outline-none font-bold text-sm pointer-events-none" value="+0" tabindex="-1">
@@ -122,7 +122,7 @@
 
                 <!-- Charisma -->
                 <div class="stat-box w-20 md:w-24 h-28" data-stat="cha">
-                    <label for="chaScore" class="stat-label">Charisma</label>
+                    <label for="chaScore" class="stat-label">Carisma</label>
                     <input type="text" id="chaScore" class="stat-score mt-2" value="10">
                     <div class="stat-mod">
                         <input type="text" id="chaMod" class="w-full text-center bg-transparent border-none outline-none font-bold text-sm pointer-events-none" value="+0" tabindex="-1">
@@ -136,23 +136,23 @@
                 <section class="mb-8 flex flex-row flex-wrap justify-between gap-3 w-full bg-[#f0f0f0] p-3 rounded-lg border border-gray-300">
                     <div class="trait-box">
                         <input type="text" id="profBonus" value="+2">
-                        <label for="profBonus" class="trait-label">Proficiency<br>Bonus</label>
+                        <label for="profBonus" class="trait-label">Bono de<br>Competencia</label>
                     </div>
                     <div class="trait-box">
                         <input type="text" id="armorClass" value="10">
-                        <label for="armorClass" class="trait-label">Armor<br>Class</label>
+                        <label for="armorClass" class="trait-label">Clase de<br>Armadura</label>
                     </div>
                     <div class="trait-box">
                         <input type="text" id="Speed" value="10">
-                        <label for="armorClass" class="trait-label">Speed</label>
+                        <label for="armorClass" class="trait-label">Velocidad</label>
                     </div>
                     <div class="trait-box">
                         <input type="text" id="initiative" value="+0">
-                        <label for="initiative" class="trait-label">Initiative</label>
+                        <label for="initiative" class="trait-label">Iniciativa</label>
                     </div>
                     <div class="trait-box">
                         <input type="text" id="passivePerception" value="10">
-                        <label for="passivePerception" class="trait-label">Passive<br>Perception</label>
+                        <label for="passivePerception" class="trait-label">Percepción<br>Pasiva</label>
                     </div>
                 </section>
                 <!-- Skills Section -->
@@ -161,10 +161,10 @@
                     <div class="absolute left-0 top-0 bottom-0 w-2 bg-red-700 opacity-80"></div>
                     
                     <div class="flex justify-between items-end border-b-2 border-gray-300 pb-2 mb-4">
-                        <h3 id="skillsHeader" class="dnd-font text-2xl font-bold text-gray-800">Skills</h3>
+                        <h3 id="skillsHeader" class="dnd-font text-2xl font-bold text-gray-800">Habilidades</h3>
                         <div class="text-xs text-gray-500 font-bold uppercase flex gap-4">
-                            <span class="flex items-center gap-1" title="Proficiency"><div class="w-3 h-3 rounded-full bg-gray-800"></div> Proficient</span>
-                            <span class="flex items-center gap-1" title="Expertise"><div class="w-3 h-3 rounded-sm bg-red-700"></div> Expertise</span>
+                            <span class="flex items-center gap-1" title="Competencia"><div class="w-3 h-3 rounded-full bg-gray-800"></div> Competente</span>
+                            <span class="flex items-center gap-1" title="Pericia"><div class="w-3 h-3 rounded-sm bg-red-700"></div> Pericia</span>
                         </div>
                     </div>
                     
@@ -183,10 +183,10 @@
                 <div class="absolute left-0 top-0 bottom-0 w-2 bg-red-700 opacity-80"></div>
                 
                 <div class="flex justify-between items-end border-b-2 border-gray-300 pb-2 mb-4">
-                    <h3 id="skillsHeader" class="dnd-font text-2xl font-bold text-gray-800">Skills</h3>
+                    <h3 id="skillsHeader" class="dnd-font text-2xl font-bold text-gray-800">Habilidades</h3>
                     <div class="text-xs text-gray-500 font-bold uppercase flex gap-4">
-                        <span class="flex items-center gap-1" title="Proficiency"><div class="w-3 h-3 rounded-full bg-gray-800"></div> Proficient</span>
-                        <span class="flex items-center gap-1" title="Expertise"><div class="w-3 h-3 rounded-sm bg-red-700"></div> Expertise</span>
+                        <span class="flex items-center gap-1" title="Competencia"><div class="w-3 h-3 rounded-full bg-gray-800"></div> Competente</span>
+                        <span class="flex items-center gap-1" title="Pericia"><div class="w-3 h-3 rounded-sm bg-red-700"></div> Pericia</span>
                     </div>
                 </div>
                 
@@ -199,18 +199,18 @@
 
         <div id="map-tab" class="tab-content hidden">
             <section class="bg-white border border-gray-300 rounded-xl p-6 shadow-sm">
-                <h3 class="text-xl font-bold mb-2 text-gray-800">Campaign Map</h3>
-                <p class="text-sm text-gray-500 mb-4">Click anywhere on the map to drop custom ping markers.</p>
+                <h3 class="text-xl font-bold mb-2 text-gray-800">Mapa de la Campaña</h3>
+                <p class="text-sm text-gray-500 mb-4">Haz clic en cualquier parte del mapa para colocar marcadores personalizados.</p>
                 
                 <div class="relative overflow-hidden rounded-lg border-2 border-gray-400 bg-gray-900 cursor-crosshair group" id="mapWrapper">
-                    <img id="campaignMap" src="map.png" alt="Campaign Map" class="w-full h-auto object-cover opacity-90 select-none">
+                    <img id="campaignMap" src="map.png" alt="Mapa de la campaña" class="w-full h-auto object-cover opacity-90 select-none">
                     
                     <div id="pinsLayer" class="absolute inset-0 pointer-events-none"></div>
                 </div>
                 
                 <div class="mt-4 flex gap-4">
                     <button onclick="clearMapPins()" class="bg-red-700 hover:bg-red-800 text-white font-bold px-4 py-2 rounded text-sm transition">
-                        Clear All Pings
+                        Borrar todos los marcadores
                     </button>
                 </div>
             </section>
@@ -219,15 +219,15 @@
         <div id="inventory-tab" class="tab-content hidden">
     <div class="flex flex-row flex-wrap justify-center gap-4 md:gap-8 w-full mb-6">             
         <div class="stat-box w-20 md:w-24 h-18">
-            <label for="goldScore" class="stat-label">Gold</label>
+            <label for="goldScore" class="stat-label">Oro</label>
             <input type="text" id="goldScore" class="stat-score mt-2" value="10">
         </div>
         <div class="stat-box w-20 md:w-24 h-18">
-            <label for="silverScore" class="stat-label">Silver</label>
+            <label for="silverScore" class="stat-label">Plata</label>
             <input type="text" id="silverScore" class="stat-score mt-2" value="10">
         </div>
         <div class="stat-box w-20 md:w-24 h-18">
-            <label for="copperScore" class="stat-label">Copper</label>
+            <label for="copperScore" class="stat-label">Cobre</label>
             <input type="text" id="copperScore" class="stat-score mt-2" value="10">
         </div>
     </div>
@@ -236,14 +236,14 @@
         <div class="absolute left-0 top-0 bottom-0 w-2 bg-red-700 opacity-80"></div>
          
         <div class="flex justify-between items-end border-b-2 border-gray-300 pb-2 mb-4">
-            <h3 class="dnd-font text-2xl font-bold text-gray-800">Items</h3>
+            <h3 class="dnd-font text-2xl font-bold text-gray-800">Objetos</h3>
         </div>
     
         <div class="grid grid-cols-12 gap-2 px-2 pb-2 text-xs font-bold uppercase text-gray-500 border-b border-gray-200">
-            <div class="col-span-5">Item Name</div>
-            <div class="col-span-2 text-center">Amount</div>
-            <div class="col-span-3">Type</div>
-            <div class="col-span-2 text-center">Equipped</div>
+            <div class="col-span-5">Nombre del objeto</div>
+            <div class="col-span-2 text-center">Cantidad</div>
+            <div class="col-span-3">Tipo</div>
+            <div class="col-span-2 text-center">Equipado</div>
         </div>
     
         <div id="itemContainer" class="flex flex-col divide-y divide-gray-100 mb-6">
@@ -258,7 +258,7 @@
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4">
                     <path stroke-linecap="round" stroke-linejoin="round" d="m14.74 9-.34 6.6m-4.78 0L9 9m9.96.873-.457 8.356A2.25 2.25 0 0 1 15.75 21H8.25a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0" />
                 </svg>
-                Delete Selected
+                Eliminar seleccionado
             </button>
 
             <button 
@@ -269,7 +269,7 @@
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-4 h-4">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
                 </svg>
-                Add New Item
+                Agregar objeto nuevo
             </button>
         </div>
     </section>
@@ -310,7 +310,7 @@ function addNewItem() {
     // Inject input fields
     row.innerHTML = `
         <div class="col-span-5">
-            <input type="text" placeholder="e.g. Longsword" class="w-full bg-transparent border-b border-gray-200 focus:border-red-500 focus:outline-none py-1">
+            <input type="text" placeholder="Ej. Espada larga" class="w-full bg-transparent border-b border-gray-200 focus:border-red-500 focus:outline-none py-1">
         </div>
         
         <div class="col-span-2 text-center">
@@ -319,12 +319,12 @@ function addNewItem() {
         
         <div class="col-span-3">
             <select class="w-full bg-transparent border-b border-gray-200 focus:border-red-500 focus:outline-none py-1 text-sm text-gray-700">
-                <option value="weapon">Weapon</option>
-                <option value="armor">Armor</option>
-                <option value="tool">Tool</option>
-                <option value="potion">Potion</option>
-                <option value="gear">Adventuring Gear</option>
-                <option value="other">Other</option>
+                <option value="weapon">Arma</option>
+                <option value="armor">Armadura</option>
+                <option value="tool">Herramienta</option>
+                <option value="potion">Poción</option>
+                <option value="gear">Equipo de aventura</option>
+                <option value="other">Otro</option>
             </select>
         </div>
         
@@ -341,7 +341,7 @@ function deleteSelectedItem() {
         selectedItemRow.remove();
         selectedItemRow = null; // Reset pointer
     } else {
-        alert("Please select an item row first by clicking on it.");
+        alert("Por favor selecciona primero la fila de un objeto haciendo clic en ella.");
     }
 }
 </script>
@@ -350,25 +350,25 @@ function deleteSelectedItem() {
                 <div class="absolute left-0 top-0 bottom-0 w-2 bg-red-700 opacity-80"></div>
                 
                 <div class="flex flex-col sm:flex-row justify-between items-start sm:items-end border-b-2 border-gray-300 pb-4 mb-6 gap-4">
-                    <h3 class="dnd-font text-2xl font-bold text-gray-800 self-center sm:self-auto">Spells</h3>
+                    <h3 class="dnd-font text-2xl font-bold text-gray-800 self-center sm:self-auto">Conjuros</h3>
                     
                     <div class="flex gap-4 w-full sm:w-auto justify-center sm:justify-end">
                         <div class="flex flex-col items-center bg-gray-50 border border-gray-300 rounded-lg px-4 py-1.5 w-24 shadow-sm">
-                            <span class="text-[10px] uppercase font-bold text-gray-500 tracking-wide">Spell DC</span>
+                            <span class="text-[10px] uppercase font-bold text-gray-500 tracking-wide">CD Conjuro</span>
                             <input type="text" placeholder="13" class="w-full text-center font-bold text-lg text-gray-800 bg-transparent focus:outline-none focus:border-red-500 border-b border-transparent">
                         </div>
                         <div class="flex flex-col items-center bg-gray-50 border border-gray-300 rounded-lg px-4 py-1.5 w-24 shadow-sm">
-                            <span class="text-[10px] uppercase font-bold text-gray-500 tracking-wide">Spell Atk</span>
+                            <span class="text-[10px] uppercase font-bold text-gray-500 tracking-wide">Ataq Conjuro</span>
                             <input type="text" placeholder="+5" class="w-full text-center font-bold text-lg text-gray-800 bg-transparent focus:outline-none focus:border-red-500 border-b border-transparent">
                         </div>
                     </div>
                 </div>
             
                 <div class="grid grid-cols-12 gap-2 px-2 pb-2 text-xs font-bold uppercase text-gray-500 border-b border-gray-200">
-                    <div class="col-span-3">Spell Name</div>
-                    <div class="col-span-1 text-center">Lvl</div>
-                    <div class="col-span-2">Damage Type</div>
-                    <div class="col-span-2">Range</div>
+                    <div class="col-span-3">Nombre del conjuro</div>
+                    <div class="col-span-1 text-center">Niv</div>
+                    <div class="col-span-2">Tipo de daño</div>
+                    <div class="col-span-2">Alcance</div>
                     <div class="col-span-2">Comp.</div>
                     <div class="col-span-1 text-center">Prep</div>
                     <div class="col-span-1 text-center">Ritual</div>
@@ -386,7 +386,7 @@ function deleteSelectedItem() {
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4">
                             <path stroke-linecap="round" stroke-linejoin="round" d="m14.74 9-.34 6.6m-4.78 0L9 9m9.96.873-.457 8.356A2.25 2.25 0 0 1 15.75 21H8.25a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0" />
                         </svg>
-                        Delete Selected
+                        Eliminar seleccionado
                     </button>
 
                     <button 
@@ -397,7 +397,7 @@ function deleteSelectedItem() {
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-4 h-4">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
                         </svg>
-                        Add New Spell
+                        Agregar conjuro nuevo
                     </button>
                 </div>
             </section>
@@ -438,16 +438,16 @@ function deleteSelectedItem() {
                 // Inject input fields
                 row.innerHTML = `
                     <div class="col-span-3">
-                        <input type="text" placeholder="e.g. Fireball" class="w-full bg-transparent border-b border-gray-200 focus:border-red-500 focus:outline-none py-1">
+                        <input type="text" placeholder="Ej. Bola de fuego" class="w-full bg-transparent border-b border-gray-200 focus:border-red-500 focus:outline-none py-1">
                     </div>
                     <div class="col-span-1 text-center">
-                        <input type="text" placeholder="3rd" class="w-full text-center bg-transparent border-b border-gray-200 focus:border-red-500 focus:outline-none py-1">
+                        <input type="text" placeholder="3.º" class="w-full text-center bg-transparent border-b border-gray-200 focus:border-red-500 focus:outline-none py-1">
                     </div>
                     <div class="col-span-2">
-                        <input type="text" placeholder="Fire" class="w-full bg-transparent border-b border-gray-200 focus:border-red-500 focus:outline-none py-1">
+                        <input type="text" placeholder="Fuego" class="w-full bg-transparent border-b border-gray-200 focus:border-red-500 focus:outline-none py-1">
                     </div>
                     <div class="col-span-2">
-                        <input type="text" placeholder="150 ft." class="w-full bg-transparent border-b border-gray-200 focus:border-red-500 focus:outline-none py-1">
+                        <input type="text" placeholder="45 m" class="w-full bg-transparent border-b border-gray-200 focus:border-red-500 focus:outline-none py-1">
                     </div>
                     <div class="col-span-2">
                         <input type="text" placeholder="V, S, M" class="w-full bg-transparent border-b border-gray-200 focus:border-red-500 focus:outline-none py-1 text-xs font-mono">
@@ -470,13 +470,13 @@ function deleteSelectedItem() {
                     selectedRow.remove();
                     selectedRow = null; // Clear pointer
                 } else {
-                    alert("Please select a spell row first by clicking on it.");
+                    alert("Por favor selecciona primero la fila de un conjuro haciendo clic en ella.");
                 }
             }
         </script>
         <!-- Placeholder for next steps -->
         <div class="text-center text-gray-400 italic mt-20 p-8 border-2 border-dashed border-gray-300 rounded-lg">
-            This space is ready for the next steps! (e.g., Skills, Saving Throws, HP, Equipment)
+            ¡Este espacio está listo para los siguientes pasos! (Ej. Habilidades, Tiradas de Salvación, PG, Equipo)
         </div>
 
     </main>
@@ -513,7 +513,7 @@ function deleteSelectedItem() {
             const y = ((e.clientY - rect.top) / rect.height) * 100;
 
             // Prompt user for a quick label names
-            const markerLabel ="p"// prompt("Enter a label for this point of interest (Optional):") || "";
+            const markerLabel ="p"// prompt("Ingresa una etiqueta para este punto de interés (Opcional):") || "";
 
             // Create Pin Element
             const pin = document.createElement('div');
@@ -544,4 +544,4 @@ function deleteSelectedItem() {
         }
     </script>
 </body>
-</html>>
+</html>
